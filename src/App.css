@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pangolin&family=Playwrite+HU:wght@100..400&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+/* :root {
+  --bg: #E4EFE7;
+  --header: #99BC85;
+  --cardColor:white;
+} */
+body {
+  background-color: var(--bg);
+   
+}
+.header {
+  background-color: var(--header);
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Pangolin", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 2rem;
+}
+.headerTheme{
+  display: flex;
+  gap:0.5rem;
+}
+.headerTheme div{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: red;
+}
+.headerTheme div:nth-child(1) { background-color: #2C3E50; }
+.headerTheme div:nth-child(2) { background-color: #99BC85; }
+.headerTheme div:nth-child(3) { background-color: #FFD1D1; }
+.headerTheme div:nth-child(4) { background-color: #A0E9FF; }
+.headerTheme div:nth-child(5) { background-color: #FFB5A7; }
+.headerTheme div:nth-child(6) { background-color: #BDB2FF; }
+
+
+.inputContainer {
+  display: flex;
+  padding: 4rem;
+  justify-content: center;
+}
+
+
+.inputCard {
+  background-color:var(--cardColor);
+  border-radius: 10px;
+  width: max(40%,450px);
+  height: 10rem;
+  padding: 1rem;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.inputCard input {
+  all: unset;
+  width: 90%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.inputCard textarea {
+  all: unset;
+  width: 90%;
+  padding: 0.5rem;
+}
+
+.plusIcon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.micIcon{
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 3rem;
+}
+
+.eachNote {
+  background-color:var(--cardColor);
+
+  border-radius: 10px;
+  position: relative;
+  /* width: 20%; */
+  min-height: 8rem;
+  padding: 1rem;
+  transition: all 200ms ease-in;
+}
+.eachNote:hover {
+  transform: scale(102%);
+}
+.eachNoteTitle {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.eachNoteContent {
+  color: gray;
+  padding: 0.5rem;
+}
+.notesContainer {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  place-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+@media screen and (max-width:680px){
+  .notesContainer{
+    grid-template-columns: repeat(2,1fr);;
+  }
+}
+@media screen and (max-width:480px){
+  .notesContainer{
+    grid-template-columns: repeat(1,1fr);;
+  }
+}
+.deleteIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  cursor: pointer;
+}
+.noteBehaviourContainer{
+  /* padding:2rem; */
+  
+  display: flex;
+  justify-content: space-between;
+}
+.searchBar{
+  width:20rem;
+}
+.parentContainer{
+  padding: 0 4rem;
+}
+.zeroState{
+  display: flex;
+  color:white;
+  /* justify-content: center; */
+}
